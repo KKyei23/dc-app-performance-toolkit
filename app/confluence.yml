@@ -21,9 +21,13 @@ settings:
     LANGUAGE: en_US.utf8
     allow_analytics: Yes            # Allow sending basic run analytics to Atlassian. These analytics help us to understand how the tool is being used and help us to continue to invest in this tooling. For more details please see our README.
     # Action percentage for JMeter and Locust load executors
-    view_page: 46
+    view_page: 40586236
+    rate_page: 40586234
+    rate_page_search: 40586252
     view_dashboard: 8
-    view_blog: 10
+    view_blog: 40586256
+    rate_blog_id: 40586256
+    rate_search_blog_id: 40586262
     search_cql: 9
     create_blog: 3
     create_and_edit_page: 7
@@ -33,7 +37,7 @@ settings:
     like_page: 2
     standalone_extension: 0 # By default disabled
     # Custom dataset section.
-    custom_dataset_query:           # Write CQL query to add CQL output to the app/datasets/confluence/custom_pages.csv, e.g. "title ~ 'AppPage*'"
+    custom_dataset_query: "title = 'Rate*'"        # Write CQL query to add CQL output to the app/datasets/confluence/custom_pages.csv, e.g. "title ~ 'AppPage*'"
 services:
   - module: shellexec
     prepare:
@@ -76,6 +80,8 @@ scenarios:
       perc_view_page: ${view_page}
       perc_view_dashboard: ${view_dashboard}
       perc_view_blog: ${view_blog}
+      rate_blog_page: ${rate_blog_id}
+      rate_search_blog_page: ${rate_search_blog_id}
       perc_search_cql: ${search_cql}
       perc_create_blog: ${create_blog}
       perc_create_and_edit_page: ${create_and_edit_page}
