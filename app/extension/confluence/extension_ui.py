@@ -45,9 +45,9 @@ def app_specific_action(webdriver, datasets):
 
         @print_timing("selenium_app_custom_action:view_page")
         def sub_measure():
-            page.go_to_url(f"{CONFLUENCE_SETTINGS.server_url}/pages/viewpage.action?pageId={40586244}")
+            page.go_to_url(f"{CONFLUENCE_SETTINGS.server_url}/pages/viewpage.action?pageId={40586236}")
             page.wait_until_visible((By.ID, "title-text"))  # Wait for title field visible
-            page.wait_until_visible((By.XPATH, "(//table)[1]"))  # Wait for you app-specific UI element by ID selector
+            page.wait_until_visible((By.XPATH, "//table"))  # Wait for you app-specific UI element by ID selector
         sub_measure()
     measure()
 
@@ -58,7 +58,7 @@ def app_specific_action(webdriver, datasets):
         def sub_measure():
             page.go_to_url(f"{CONFLUENCE_SETTINGS.server_url}/pages/viewpage.action?pageId={40586234}")
             page.wait_until_visible((By.ID, "title-text"))  # Wait for title field visible
-            page.wait_until_visible((By.XPATH, "(//table)[1]"))  # Wait for you app-specific UI element by ID selector
+            page.wait_until_visible((By.XPATH, "//table"))  # Wait for you app-specific UI element by ID selector
             rate = page.wait_until_visible((By.XPATH, "//a[@title='4 Star']"))
             rate.click()
         sub_measure()
