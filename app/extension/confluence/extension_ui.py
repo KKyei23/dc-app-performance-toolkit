@@ -45,7 +45,7 @@ def app_specific_action(webdriver, datasets):
 
         @print_timing("selenium_app_custom_action:view_page")
         def sub_measure():
-            page.go_to_url(f"{CONFLUENCE_SETTINGS.server_url}/pages/viewpage.action?pageId={393565}")
+            page.go_to_url(f"{CONFLUENCE_SETTINGS.server_url}/pages/viewpage.action?pageId={40586244}")
             page.wait_until_visible((By.ID, "title-text"))  # Wait for title field visible
             page.wait_until_visible((By.XPATH, "(//table)[1]"))  # Wait for you app-specific UI element by ID selector
         sub_measure()
@@ -56,7 +56,7 @@ def app_specific_action(webdriver, datasets):
 
         @print_timing("selenium_app_custom_action:rate_page")
         def sub_measure():
-            page.go_to_url(f"{CONFLUENCE_SETTINGS.server_url}/pages/viewpage.action?pageId={393569}")
+            page.go_to_url(f"{CONFLUENCE_SETTINGS.server_url}/pages/viewpage.action?pageId={40586234}")
             page.wait_until_visible((By.ID, "title-text"))  # Wait for title field visible
             page.wait_until_visible((By.XPATH, "(//table)[1]"))  # Wait for you app-specific UI element by ID selector
             rate = page.wait_until_visible((By.XPATH, "//a[@title='4 Star']"))
@@ -69,7 +69,7 @@ def app_specific_action(webdriver, datasets):
 
         @print_timing("selenium_app_custom_action:view_rated_search_page")
         def sub_measure():
-            page.go_to_url(f"{CONFLUENCE_SETTINGS.server_url}/pages/viewpage.action?pageId={393567}")
+            page.go_to_url(f"{CONFLUENCE_SETTINGS.server_url}/pages/viewpage.action?pageId={40586252}")
             page.wait_until_visible((By.ID, "title-text"))
             page.wait_until_visible((By.XPATH, "//div[@data-macro-name='rate-search']"))
         sub_measure()
@@ -80,7 +80,7 @@ def app_specific_action(webdriver, datasets):
 
         @print_timing("selenium_app_custom_action:rate_blog_page")
         def sub_measure():
-            page.go_to_url(f"{CONFLUENCE_SETTINGS.server_url}/pages/viewpage.action?pageId={393575}")
+            page.go_to_url(f"{CONFLUENCE_SETTINGS.server_url}/pages/viewpage.action?pageId={40586256}")
             page.wait_until_visible((By.ID, "title-text"))
             page.wait_until_visible((By.CLASS_NAME, "rater"))
         sub_measure()
@@ -91,7 +91,7 @@ def app_specific_action(webdriver, datasets):
 
         @print_timing("selenium_app_custom_action:view_rated_search_blogpage")
         def sub_measure():
-            page.go_to_url(f"{CONFLUENCE_SETTINGS.server_url}/pages/viewpage.action?pageId={393579}")
+            page.go_to_url(f"{CONFLUENCE_SETTINGS.server_url}/pages/viewpage.action?pageId={40586262}")
             page.wait_until_visible((By.ID, "title-text"))
             page.wait_until_visible((By.XPATH, "//div[@data-macro-name='rate-search']"))
         sub_measure()
