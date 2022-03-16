@@ -137,12 +137,3 @@ class Editor(BasePage):
         self.wait_until_invisible(EditorLocators.save_spinner)
         self.wait_until_any_ec_presented(selectors=[PageLocators.page_title,
                                                     EditorLocators.confirm_publishing_button])
-
-class Authenticate(BasePage):
-
-    def set_auth_credentials(self, password):
-        self.get_element(AdministratorAccessLocators.password_field).send_keys(password)
-
-    def click_auth_button(self):
-        self.wait_until_visible(AdministratorAccessLocators.authentication_button).click()
-        self.wait_until_invisible(AdministratorAccessLocators.authentication_button)

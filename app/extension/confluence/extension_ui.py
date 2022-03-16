@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 
 from selenium_ui.base_page import BasePage
 from selenium_ui.conftest import print_timing
-from selenium_ui.confluence.pages.pages import Login, Authenticate, AllUpdates
+from selenium_ui.confluence.pages.pages import Login, AllUpdates
 from util.conf import CONFLUENCE_SETTINGS
 
 def app_specific_action(webdriver, datasets):
@@ -22,7 +22,7 @@ def app_specific_action(webdriver, datasets):
              login_page.delete_all_cookies()
              login_page.go_to()
              login_page.wait_for_page_loaded()
-             login_page.set_credentials(username, password)
+             login_page.set_credentials(username=username, password=password)
              login_page.click_login_button()
              if login_page.is_first_login():
                  login_page.first_user_setup()
@@ -36,7 +36,7 @@ def app_specific_action(webdriver, datasets):
     # Same two with blog pages
 
 
-    @print_timing("selenium_app_custom_action")
+    # @print_timing("selenium_app_custom_action")
     def measure():
 
         @print_timing("selenium_app_custom_action:view_rate_page")
@@ -47,7 +47,7 @@ def app_specific_action(webdriver, datasets):
         sub_measure()
     measure()
 
-    @print_timing("selenium_app_rate_page")
+    # @print_timing("selenium_app_rate_page")
     def measure():
 
         @print_timing("selenium_app_custom_action:rate_page")
