@@ -29,7 +29,7 @@ def app_specific_action(webdriver, datasets):
              all_updates_page = AllUpdates(webdriver)
              all_updates_page.wait_for_page_loaded()
          app_specific_user_login(username='admin', password='admin')
-     measure()
+    measure()
 
     #Log to page with rate macro, wait till visible then log out
     #log into page with rate search macro wait till visible then log out
