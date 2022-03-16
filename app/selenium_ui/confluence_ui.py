@@ -1,6 +1,6 @@
 from util.conf import CONFLUENCE_SETTINGS
 from selenium_ui.confluence import modules
-from extension.confluence import extension_ui  # noqa F401
+from extension.confluence import rate_extension_ui  # noqa F401
 
 
 # this action should be the first one
@@ -39,7 +39,7 @@ Refer to `app/selenium_ui/confluence/modules.py` for examples.
 """
 def test_1_selenium_custom_action(confluence_webdriver, confluence_datasets, confluence_screen_shots):
     if CONFLUENCE_SETTINGS.get_application == 'rate':
-    extension_ui.app_specific_action(confluence_webdriver, confluence_datasets)
+    rate_extension_ui.app_specific_action(confluence_webdriver, confluence_datasets)
 
 
 # this action should be the last one
