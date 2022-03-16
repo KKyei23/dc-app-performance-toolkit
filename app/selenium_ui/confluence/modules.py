@@ -1,7 +1,7 @@
 import random
 from selenium_ui.conftest import print_timing
 
-from selenium_ui.confluence.pages.pages import Login, AllUpdates, PopupManager, Page, Dashboard, TopNavPanel, Editor, \
+from selenium_ui.confluence.pages.pages import Login, AllUpdates, PopupManager, Page, Dashboard, TopNavPanel, Editor, Authenticate, \
     Logout
 
 USERS = "users"

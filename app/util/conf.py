@@ -27,10 +27,15 @@ class BaseAppSettings:
         self.analytics_collector = self.get_property('allow_analytics')
         self.load_executor = self.get_property('load_executor')
         self.secure = self.get_property('secure')
+        self.plugin_name = self.get_property('plugin_name')
 
     @property
     def server_url(self):
         return f'{self.protocol}://{self.hostname}:{self.port}{self.postfix}'
+
+    @property
+    def get_application(self):
+        return f'{self.plugin_name}'
 
     def get_property(self, property_name):
         if property_name not in self.env_settings:
@@ -58,6 +63,26 @@ class ConfluenceSettings(BaseAppSettings):
         self.custom_dataset_query = self.get_property('custom_dataset_query') or ""
         self.verbose = self.settings['verbose']
         self.total_actions_per_hour = self.get_property('total_actions_per_hour')
+        self.rate_view_page = self.get_property('rate_view_page')
+        self.rate_search_view_page = self.get_property('rate_search_view_page')
+        self.rate_blog_page = self.get_property('rate_blog_page')
+        self.rate_search_blog_page = self.get_property('rate_search_blog_page')
+
+        @property
+        def get_rate_page(self):
+            return f'{self.rate_view_page}'
+
+        @property
+        def get_rate_search_page(self):
+            return f'{self.rate_search_view_page}'
+
+        @property
+        def get_rate_blog_page(self):
+            return f'{self.rate_blog_page}'
+
+        @property
+        def get_rate_search_blog_page(self):
+            return f'{self.rate_search_blog_page}'
 
 
 class BitbucketSettings(BaseAppSettings):

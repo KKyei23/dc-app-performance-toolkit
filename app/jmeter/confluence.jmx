@@ -28,6 +28,11 @@
             <stringProp name="Argument.value">${__P(application_protocol, http)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
+          <elementProp name="plugin.name" elementType="Argument">
+                      <stringProp name="Argument.name">plugin.name</stringProp>
+                      <stringProp name="Argument.value">${__P(application_protocol, rate)}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
           <elementProp name="application.postfix" elementType="Argument">
             <stringProp name="Argument.name">application.postfix</stringProp>
             <stringProp name="Argument.value">${__P(application_postfix,)}</stringProp>

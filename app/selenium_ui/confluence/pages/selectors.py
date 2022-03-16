@@ -89,3 +89,7 @@ class EditorLocators:
 
 class LogoutLocators:
     logout_msg = (By.ID, "logout-message")
+
+class AdministratorAccessLocators:
+    password_field = (By.ID, "password")
+    authentication_button = (By.ID, "authenticateButton")
