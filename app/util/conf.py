@@ -63,26 +63,26 @@ class ConfluenceSettings(BaseAppSettings):
         self.custom_dataset_query = self.get_property('custom_dataset_query') or ""
         self.verbose = self.settings['verbose']
         self.total_actions_per_hour = self.get_property('total_actions_per_hour')
-        self.rate_view_page = self.get_property('rate_view_page_id')
-        self.rate_search_view_page = self.get_property('rate_page_search_id')
-        self.rate_blog_page = self.get_property('rate_blog_id')
-        self.rate_search_blog_page = self.get_property('rate_search_blog_id')
+        self.rate_view = self.get_property('rate_view_page_id')
+        self.rate_search_view = self.get_property('rate_page_search_id')
+        self.rate_blog = self.get_property('rate_blog_id')
+        self.rate_search_blog = self.get_property('rate_search_blog_id')
 
-        @property
-        def get_rate_page(self):
-            return f'{self.rate_view_page}'
+    @property
+    def get_rate_page(self):
+        return f'{self.rate_view}'
 
-        @property
-        def get_rate_search_page(self):
-            return f'{self.rate_search_view_page}'
+    @property
+    def get_rate_search_page(self):
+        return f'{self.rate_search_view}'
 
-        @property
-        def get_rate_blog_page(self):
-            return f'{self.rate_blog_page}'
+    @property
+    def get_rate_blog_page(self):
+        return f'{self.rate_blog}'
 
-        @property
-        def get_rate_search_blog_page(self):
-            return f'{self.rate_search_blog_page}'
+    @property
+    def get_rate_search_blog_page(self):
+        return f'{self.rate_search_blog}'
 
 
 class BitbucketSettings(BaseAppSettings):
