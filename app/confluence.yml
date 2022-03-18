@@ -23,13 +23,13 @@ settings:
     allow_analytics: Yes            # Allow sending basic run analytics to Atlassian. These analytics help us to understand how the tool is being used and help us to continue to invest in this tooling. For more details please see our README.
     # Action percentage for JMeter and Locust load executors
     view_page: 46
-    rate_view_page_id: 40586236
-    rate_page_id: 40586234
-    rate_page_search_id: 40586252
+    rate_view_page_id: 40619056
+    rate_page_id: 40619052
+    rate_page_search_id: 40619058
     view_dashboard: 8
     view_blog: 10
-    rate_blog_id: 40586256
-    rate_search_blog_id: 40586262
+    rate_blog_id: 40619071
+    rate_search_blog_id: 40619073
     search_cql: 9
     create_blog: 3
     create_and_edit_page: 7
